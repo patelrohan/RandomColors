@@ -61,11 +61,11 @@
 				1C68CE512AA52E37000D52DE /* AppDelegate.swift */,
 				1C68CE532AA52E37000D52DE /* SceneDelegate.swift */,
 				1C68CE552AA52E37000D52DE /* ViewController.swift */,
+				1C68CE652AA5301B000D52DE /* ColorsDetailVC.swift */,
 				1C68CE572AA52E37000D52DE /* Main.storyboard */,
 				1C68CE5A2AA52E38000D52DE /* Assets.xcassets */,
 				1C68CE5C2AA52E38000D52DE /* LaunchScreen.storyboard */,
 				1C68CE5F2AA52E38000D52DE /* Info.plist */,
-				1C68CE652AA5301B000D52DE /* ColorsDetailVC.swift */,
 			);
 			path = RandomColors;
 			sourceTree = "<group>";

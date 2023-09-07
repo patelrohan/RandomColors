@@ -32,9 +32,12 @@ class ViewController: UIViewController {
         
         return randomColor
     }
+    
+    
+    
 
 }
-
+ 
 
 extension ViewController:  UITableViewDelegate, UITableViewDataSource{
     
@@ -46,13 +49,17 @@ extension ViewController:  UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ColorCell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ColorCell") else{
+            return UITableViewCell()
+        }
+        cell.backgroundColor = colors[indexPath.row]
         
-        return UITableViewCell()
+        return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let color = colors[indexPath.row]
         performSegue(withIdentifier: "ToColorsDetailVC", sender: nil)
     }
 }
