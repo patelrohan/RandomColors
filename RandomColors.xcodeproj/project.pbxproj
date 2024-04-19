@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C3294CA2BD1BA880089607D /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3294C92BD1BA880089607D /* UIColor+Ext.swift */; };
 		1C68CE522AA52E37000D52DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C68CE512AA52E37000D52DE /* AppDelegate.swift */; };
 		1C68CE542AA52E37000D52DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C68CE532AA52E37000D52DE /* SceneDelegate.swift */; };
 		1C68CE562AA52E37000D52DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C68CE552AA52E37000D52DE /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C3294C92BD1BA880089607D /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		1C68CE4E2AA52E37000D52DE /* RandomColors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomColors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C68CE512AA52E37000D52DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C68CE532AA52E37000D52DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				1C68CE512AA52E37000D52DE /* AppDelegate.swift */,
 				1C68CE532AA52E37000D52DE /* SceneDelegate.swift */,
 				1C68CE552AA52E37000D52DE /* ViewController.swift */,
+				1C3294C92BD1BA880089607D /* UIColor+Ext.swift */,
 				1C68CE652AA5301B000D52DE /* ColorsDetailVC.swift */,
 				1C68CE572AA52E37000D52DE /* Main.storyboard */,
 				1C68CE5A2AA52E38000D52DE /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			files = (
 				1C68CE562AA52E37000D52DE /* ViewController.swift in Sources */,
 				1C68CE662AA5301B000D52DE /* ColorsDetailVC.swift in Sources */,
+				1C3294CA2BD1BA880089607D /* UIColor+Ext.swift in Sources */,
 				1C68CE522AA52E37000D52DE /* AppDelegate.swift in Sources */,
 				1C68CE542AA52E37000D52DE /* SceneDelegate.swift in Sources */,
 			);

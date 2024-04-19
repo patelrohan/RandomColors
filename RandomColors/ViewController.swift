@@ -11,6 +11,14 @@ class ViewController: UIViewController {
     
     var colors: [UIColor] = []
     
+    enum Cells{
+        static let colorCell = "ColorCell"
+    }
+    
+    enum Segues{
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         createRandomColors()
@@ -19,27 +27,25 @@ class ViewController: UIViewController {
     
     func createRandomColors(){
         for _ in 0..<50{
-            colors.append(addRandomColor())
+            colors.append(.randomColor())
         }
     }
-
     
-    func addRandomColor() -> UIColor{
-        let randomColor = UIColor(red: CGFloat.random(in: 0...1),
-                                  green: CGFloat.random(in: 0...1),
-                                  blue: CGFloat.random(in: 0...1),
-                                  alpha: 1.0)
-        
-        return randomColor
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destVC = segue.destination as! ColorsDetailVC
+        destVC.color = sender as? UIColor
     }
-    
-    
-    
-
 }
- 
 
 extension ViewController:  UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ColorCell") else {
+            return UITableViewCell()
+        }
+        cell.backgroundColor = colors[indexPath.row]
+        return cell
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,19 +53,9 @@ extension ViewController:  UITableViewDelegate, UITableViewDataSource{
     }
     
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ColorCell") else{
-            return UITableViewCell()
-        }
-        cell.backgroundColor = colors[indexPath.row]
-        
-        return cell
-    }
-    
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let color = colors[indexPath.row]
-        performSegue(withIdentifier: "ToColorsDetailVC", sender: nil)
+        let selectedColor = colors[indexPath.row]
+        performSegue(withIdentifier: "ToColorsDetailVC", sender: selectedColor)
     }
+    
 }
